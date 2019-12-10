@@ -31,7 +31,7 @@ startBroker(){
     fi
 
     if [ ! -z "$BROKERIP" ];then
-        sed -i "s/BROKER_IP/$BROKERIP/" $CONFIG
+        sed -i "s/BROKER_IP/$BROKERIP/g" $CONFIG
     fi
 
     if [ ! -z "$NAMESRV" ];then
