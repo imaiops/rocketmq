@@ -34,6 +34,10 @@ startBroker(){
         sed -i "s/BROKER_IP/$BROKERIP/g" $CONFIG
     fi
 
+    if [ ! -z "$PORT" ];then
+        sed -i "s/10911/$PORT/" $CONFIG
+    fi
+    
     if [ ! -z "$NAMESRV" ];then
         sed -i "s/127.0.0.1:9876/$NAMESRV/" $CONFIG
     fi
