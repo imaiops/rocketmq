@@ -10,8 +10,6 @@ RUN apk update \
 COPY broker.properties /opt/broker.properties
 COPY Entrypoint.sh /Entrypoint.sh
 
-EXPOSE 9876 10909 10911 10912
-
 ENV ROCKETMQ_VERSION 4.6.0
 
 RUN wget https://archive.apache.org/dist/rocketmq/${ROCKETMQ_VERSION}/rocketmq-all-${ROCKETMQ_VERSION}-bin-release.zip -O /opt/rocketmq.zip \
